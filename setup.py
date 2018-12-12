@@ -5,12 +5,18 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="github-wrapper",
-    version="0.0.4",
+    version="0.0.5",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
     url="https://github.com/py-nayls/github-wrapper",
-    packages=setuptools.find_packages(),
+    packages=[
+        "github_wrapper",
+        "github_wrapper.common",
+        "github_wrapper.v3",
+        "github_wrapper.v3.issues",
+        "github_wrapper.v3.pull_requests",
+    ],
 
     author="Gagarin Svyatoslav",
     author_email="nayls@bk.ru",
