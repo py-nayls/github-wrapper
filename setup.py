@@ -10,7 +10,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
 
     url="https://github.com/py-nayls/github-wrapper",
-    packages=["github"],
+    packages=setuptools.find_packages(),
 
     author="Gagarin Svyatoslav",
     author_email="nayls@bk.ru",
