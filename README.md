@@ -1,15 +1,12 @@
-# py-nayls/pytest-github
+# github-wrapper
 
-[![Build Status](https://travis-ci.org/py-nayls/pytest-github-auth.svg?branch=master)](https://travis-ci.org/py-nayls/pytest-github-auth)
+[![Build Status](https://travis-ci.org/py-nayls/github-wrapper.svg?branch=master)](https://travis-ci.org/py-nayls/github-wrapper)
 
 ### install
 
-> https://pypi.org/project/nayls-github-auth/
+> https://pypi.org/project/github-wrapper/
 ```sh
-pip py-nayls-github-client
-
-###
-from py-nayls-github-client
+pip github-wrapper
 ```
 
 
@@ -26,7 +23,6 @@ pip install setuptools twine
 
 ```sh
 python setup.py build
-#OR
 python setup.py sdist
 ```
 

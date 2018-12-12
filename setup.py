@@ -1,18 +1,16 @@
-import os
-
 import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="py-nayls-github-client",
+    name="github-wrapper",
     version="0.0.1",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    url="https://github.com/py-nayls/github-client/",
-    packages=["github_client"],
+    url="https://github.com/py-nayls/github-wrapper",
+    packages=["github"],
 
     author="Gagarin Svyatoslav",
     author_email="nayls@bk.ru",
