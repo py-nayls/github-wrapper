@@ -7,7 +7,8 @@ import requests
 #
 #     :param params:
 #     :param auth:
-#     :return:
+#     :return: :class:`Response <Response>` object
+    :rtype: requests.Response
 #     """
 #     return requests.get(
 #         "https://api.github.com",
@@ -24,7 +25,8 @@ def list_pull_requests(owner: str, repo: str, params=None, auth=None) -> request
     :param repo:string
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
     return requests.get(
         "https://api.github.com/repos/{owner}/{repo}/pulls".format(owner=owner, repo=repo),
@@ -37,9 +39,13 @@ def get_a_single_pull_request(owner: str, repo: str, number: int, params=None, a
     """
     Get a single pull request
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
     return requests.get(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}".format(owner=owner, repo=repo, number=number),
@@ -48,15 +54,18 @@ def get_a_single_pull_request(owner: str, repo: str, number: int, params=None, a
     )
 
 
-def create_a_pull_request(owner: str, repo: str, params=None, auth=None) -> requests.Response:
+def create_a_pull_request(owner: str, repo: str, json=None, params=None, auth=None) -> requests.Response:
     """
     Create a pull request
 
+    :param owner:
+    :param repo:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
-    return requests.get(
+    return requests.post(
         "https://api.github.com/repos/{owner}/{repo}/pulls".format(owner=owner, repo=repo),
         params,
         auth=auth
@@ -67,11 +76,15 @@ def update_a_pull_request(owner: str, repo: str, number: int, params=None, auth=
     """
     Update a pull request
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
-    return requests.get(
+    return requests.patch(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}".format(owner=owner, repo=repo, number=number),
         params,
         auth=auth
@@ -82,9 +95,13 @@ def list_commits_on_a_pull_request(owner: str, repo: str, number: int, params=No
     """
     List commits on a pull request
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
     return requests.get(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}/commits".format(owner=owner, repo=repo, number=number),
@@ -97,9 +114,13 @@ def list_pull_requests_files(owner: str, repo: str, number: int, params=None, au
     """
     List pull requests files
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
     return requests.get(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}/files".format(owner=owner, repo=repo, number=number),
@@ -112,9 +133,13 @@ def get_if_a_pull_request_has_been_merged(owner: str, repo: str, number: int, pa
     """
     Get if a pull request has been merged
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
     return requests.get(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}/merge".format(owner=owner, repo=repo, number=number),
@@ -127,11 +152,15 @@ def merge_a_pull_request_button(owner: str, repo: str, number: int, params=None,
     """
     Merge a pull request (Merge Button)
 
+    :param owner:
+    :param repo:
+    :param number:
     :param params:
     :param auth:
-    :return:
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
     """
-    return requests.get(
+    return requests.put(
         "https://api.github.com/repos/{owner}/{repo}/pulls/{number}/merge".format(owner=owner, repo=repo, number=number),
         params,
         auth=auth
@@ -144,7 +173,8 @@ def merge_a_pull_request_button(owner: str, repo: str, number: int, params=None,
 #
 #     :param params:
 #     :param auth:
-#     :return:
+#     :return: :class:`Response <Response>` object
+#     :rtype: requests.Response
 #     """
 #     return requests.get(
 #         "https://api.github.com/repos/{owner}/{repo}/pulls".format(owner=owner, repo=repo),
@@ -159,7 +189,8 @@ def merge_a_pull_request_button(owner: str, repo: str, number: int, params=None,
 #
 #     :param params:
 #     :param auth:
-#     :return:
+#     :return: :class:`Response <Response>` object
+#     :rtype: requests.Response
 #     """
 #     return requests.get(
 #         "https://api.github.com/repos/{owner}/{repo}/pulls".format(owner=owner, repo=repo),
