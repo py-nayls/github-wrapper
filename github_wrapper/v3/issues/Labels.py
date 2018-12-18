@@ -89,7 +89,6 @@ def delete_label(owner: str, repo: str, name: str, params=None, auth=None) -> re
     """
     return requests.delete(
         "https://api.github.com/repos/{owner}/{repo}/labels/{name}".format(owner=owner, repo=repo, name=name),
-        params,
         auth=auth
     )
 
@@ -147,7 +146,6 @@ def remove_a_label_from_an_issue(owner: str, repo: str, number: int, name: str, 
     """
     return requests.delete(
         "https://api.github.com/repos/{owner}/{repo}/issues/{number}/labels/{name}".format(owner=owner, repo=repo, number=number, name=name),
-        params,
         auth=auth
     )
 
@@ -185,7 +183,6 @@ def remove_all_labels_from_an_issue(owner: str, repo: str, number: int, params=N
     """
     return requests.delete(
         "https://api.github.com/repos/{owner}/{repo}/issues/{number}/labels".format(owner=owner, repo=repo, number=number),
-        params,
         auth=auth
     )
 

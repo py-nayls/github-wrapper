@@ -8,7 +8,7 @@ import requests
 #     :param params:
 #     :param auth:
 #     :return: :class:`Response <Response>` object
-    :rtype: requests.Response
+    # :rtype: requests.Response
 #     """
 #     return requests.get(
 #         "https://api.github.com",
