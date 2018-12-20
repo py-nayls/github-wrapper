@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="github-wrapper",
-    version="0.0.8",
+    version="0.0.9",
     long_description=long_description,
     long_description_content_type="text/markdown",
 
